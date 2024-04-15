@@ -1,4 +1,4 @@
-# Project Repository
+# Project Repository iWhisper
 
 **For anyone unfortunate enough to stumble upon this, this is my first repository. Here, I would like to use the OpenAI Whisper model to replace the dictation function on my Mac. The reason I'm doing this is for a learning experience. I think it is beneficial for me as a young coder, and, additionally, I am very dyslexic. It is extremely difficult for me to type as quickly as I speak, and I find it much more convenient to use dictation all the time rather than typing. As such, this is why I'm here. The very rough roadmap should look something like: Experiment Whisper, Experiment MacOS, Stability.**
 
