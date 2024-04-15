@@ -15,7 +15,3 @@
 3. **Ensure System Stability**
    - Focus on the reliability and robustness of the application for daily use.
    - Implement error handling and continuous performance testing.
-
-## Conclusion
-
-This project aims to merge advanced AI dictation capabilities with user-friendly MacOS integration, specifically tailored to enhance accessibility for users like myself who face challenges with traditional typing due to dyslexia. Your interest and feedback are invaluable as I undertake this learning journey. Thank you for your support!
