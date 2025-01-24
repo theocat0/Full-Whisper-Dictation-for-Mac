@@ -1,0 +1,9 @@
+openai-whisper>=20231117
+sounddevice>=0.4.6
+numpy>=1.24.0
+PyQt6>=6.5.0
+keyboard>=0.13.5
+pyperclip>=1.8.2
+scipy>=1.11.0
+py2app>=0.28.6; sys_platform == 'darwin'
+setuptools>=65.0.0 
