@@ -6,22 +6,22 @@ APP = ['test_deps.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': True,
-    'packages': ['whisper', 'sounddevice', 'keyboard', 'pyperclip', 'numpy', 'PyQt6'],
+    'packages': ['PyQt6'],
     'plist': {
         'CFBundleName': 'Whisper Dictation Test',
         'CFBundleDisplayName': 'Whisper Dictation Test',
         'CFBundleIdentifier': 'com.whisperdictation.test',
         'CFBundleVersion': '0.1.0',
         'CFBundleShortVersionString': '0.1.0',
-        'LSMinimumSystemVersion': '10.10',
-        'NSMicrophoneUsageDescription': 'Microphone access is required for speech recognition'
+        'LSMinimumSystemVersion': '10.10'
     }
 }
 
 setup(
     name='whisper-dictation-mac-test',
+    version='0.1.0',
+    setup_requires=['py2app'],
     app=APP,
     data_files=DATA_FILES,
-    options={'py2app': OPTIONS},
-    setup_requires=['py2app'],
+    options={'py2app': OPTIONS}
 ) 
