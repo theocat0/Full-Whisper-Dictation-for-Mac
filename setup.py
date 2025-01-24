@@ -6,7 +6,29 @@ APP = ['src/main.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': True,
-    'packages': ['PyQt6', 'whisper', 'numpy', 'sounddevice', 'keyboard', 'pyperclip', 'scipy'],
+    'packages': [
+        'PyQt6',
+        'whisper',
+        'numpy',
+        'sounddevice',
+        'keyboard',
+        'pyperclip',
+        'scipy',
+        'numba',
+        'llvmlite',
+        'torch',
+        'regex',
+        'tiktoken',
+        'certifi'
+    ],
+    'includes': [
+        'numba.core.types.old_scalars',
+        'numba.core.types',
+        'numba.core',
+        'numba.np',
+        'numba.np.ufunc'
+    ],
+    'frameworks': ['libSystem.B.dylib'],
     'plist': {
         'CFBundleName': 'Whisper Dictation',
         'CFBundleDisplayName': 'Whisper Dictation',
@@ -32,6 +54,8 @@ setup(
         'sounddevice>=0.4.6',
         'keyboard>=0.13.5',
         'pyperclip>=1.8.2',
-        'scipy>=1.10.0'
+        'scipy>=1.10.0',
+        'numba>=0.57.1',
+        'llvmlite>=0.41.0'
     ],
 ) 

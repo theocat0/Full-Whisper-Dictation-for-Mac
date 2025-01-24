@@ -6,7 +6,7 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[('src', 'src')],
-    hiddenimports=['whisperdictation.app', 'whisper', 'numpy', 'sounddevice', 'keyboard', 'pyperclip', 'scipy'],
+    hiddenimports=['numba', 'numba.core', 'numba.core.types', 'numba.core.types.scalars', 'numba.core.types.old_scalars', 'whisperdictation.app'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -46,5 +46,5 @@ app = BUNDLE(
     coll,
     name='Whisper Dictation.app',
     icon=None,
-    bundle_identifier=None,
+    bundle_identifier='com.whisperdictation.app',
 )
