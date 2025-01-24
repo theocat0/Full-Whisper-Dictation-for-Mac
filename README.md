@@ -1,107 +1,83 @@
-# Whisper Dictation for Mac
+# Whisper Dictation for macOS
 
-A native macOS dictation application using OpenAI's Whisper model for offline speech recognition, optimized for Apple Silicon (M1/M2).
+A native macOS application that provides real-time speech-to-text dictation using OpenAI's Whisper model.
 
-## Project Background
+## Download and Installation
 
-This project aims to replace the default macOS dictation with a local, privacy-focused solution using OpenAI's Whisper model. It was created to provide a more reliable dictation experience, especially beneficial for users who prefer speaking over typing or those with specific accessibility needs.
+### Easy Installation (Recommended)
+1. Go to the [Releases](https://github.com/yourusername/Dictation_whisper_Mac/releases) page
+2. Download the latest `Whisper.Dictation.app.zip` file
+3. Unzip the file
+4. Move `Whisper Dictation.app` to your Applications folder
+5. Double-click to launch the application
+
+Note: When launching for the first time, macOS might show a security warning. To resolve this:
+1. Open System Preferences > Security & Privacy
+2. Click "Open Anyway" to allow the application to run
+
+### Building from Source
+If you prefer to build the application yourself:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/Dictation_whisper_Mac.git
+cd Dictation_whisper_Mac
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On macOS/Linux
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Build the application:
+```bash
+pyinstaller --name="Whisper Dictation" --windowed --add-data "src:src" --hidden-import=whisperdictation.app src/main.py
+```
+
+The built application will be available in the `dist` directory.
 
 ## Features
 
-- 🎙️ Local speech recognition (no internet required)
-- ⌨️ Global hotkey (⌘⇧Space) to start recording
-- 📎 Automatic clipboard copy of transcribed text
-- 🎯 Optimized for Apple Silicon
-- 🔒 100% Private - all processing done locally
+- Real-time speech-to-text transcription
+- Uses OpenAI's Whisper model for accurate transcription
+- Native macOS application
+- Keyboard shortcuts for quick access
+- Clipboard integration for easy text pasting
 
-## Project Roadmap
+## System Requirements
 
-1. **Experiment with Whisper Model**
-   - Develop a basic application to implement the Whisper model for dictation
-   - Test various configurations to optimize accuracy and speed
+- macOS 10.10 or later
+- 4GB RAM minimum (8GB recommended)
+- 2GB free disk space
 
-2. **Experiment with MacOS Integration**
-   - Address MacOS-specific challenges to integrate the dictation effectively
-   - Create a seamless activation shortcut similar to existing MacOS dictation features
+## Usage
 
-3. **Ensure System Stability**
-   - Focus on the reliability and robustness of the application for daily use
-   - Implement error handling and continuous performance testing
+1. Launch the application
+2. Click the microphone button or use the keyboard shortcut to start recording
+3. Speak clearly into your microphone
+4. The transcribed text will appear in the application window
+5. Click to copy the text to your clipboard
 
-## Quick Install
+## Known Issues
 
-1. Download the latest release from the [Releases](https://github.com/theocat0/Full-Whisper-Dictation-for-Mac/releases) page
-2. Unzip and drag `Whisper Dictation.app` to your Applications folder
-3. Launch and grant microphone permissions when prompted
-
-## Build from Source
-
-### Prerequisites
-
-- Python 3.8 or later
-- pip (Python package manager)
-- Git
-
-### Installation Steps
-
-```bash
-# Clone the repository
-git clone https://github.com/theocat0/Full-Whisper-Dictation-for-Mac.git
-cd Full-Whisper-Dictation-for-Mac
-
-# Create a virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Build the application
-python setup.py py2app
-```
-
-The built application will be in the `dist` folder.
-
-## Project Structure
-
-```
-whisper-dictation-mac/
-├── src/
-│   ├── whisperdictation/
-│   │   ├── __init__.py
-│   │   └── app.py
-│   └── main.py
-├── requirements.txt
-├── setup.py
-├── README.md
-└── LICENSE
-```
-
-## Requirements
-
-- macOS 11.0 or later
-- Apple Silicon Mac (M1/M2) recommended
-- ~2GB disk space (for Whisper model)
-
-## Privacy
-
-- All speech recognition is performed locally on your device
-- No audio data is ever sent to external servers
-- No telemetry or data collection
-
-## License
-
-MIT License - See LICENSE file for details
+- First launch may take a few seconds while the Whisper model is loaded
+- Requires an active internet connection for initial model download
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-- [OpenAI Whisper](https://github.com/openai/whisper) for the amazing speech recognition model
+- [OpenAI Whisper](https://github.com/openai/whisper) for the speech recognition model
 - [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) for the GUI framework

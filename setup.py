@@ -2,26 +2,34 @@
 
 from setuptools import setup
 
-APP = ['test_deps.py']
+APP = ['src/main.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': True,
-    'packages': ['PyQt6'],
+    'packages': ['PyQt6', 'whisper', 'numpy', 'sounddevice', 'keyboard', 'pyperclip', 'scipy'],
     'plist': {
-        'CFBundleName': 'Whisper Dictation Test',
-        'CFBundleDisplayName': 'Whisper Dictation Test',
-        'CFBundleIdentifier': 'com.whisperdictation.test',
-        'CFBundleVersion': '0.1.0',
-        'CFBundleShortVersionString': '0.1.0',
-        'LSMinimumSystemVersion': '10.10'
+        'CFBundleName': 'Whisper Dictation',
+        'CFBundleDisplayName': 'Whisper Dictation',
+        'CFBundleIdentifier': 'com.whisperdictation.app',
+        'CFBundleVersion': '1.0.0',
+        'CFBundleShortVersionString': '1.0.0',
+        'LSMinimumSystemVersion': '10.10',
     }
 }
 
 setup(
-    name='whisper-dictation-mac-test',
-    version='0.1.0',
-    setup_requires=['py2app'],
+    name='whisper-dictation-mac',
     app=APP,
     data_files=DATA_FILES,
-    options={'py2app': OPTIONS}
+    options={'py2app': OPTIONS},
+    setup_requires=['py2app'],
+    install_requires=[
+        'openai-whisper>=0.0.1',
+        'PyQt6>=6.4.0',
+        'numpy>=1.24.1',
+        'sounddevice>=0.4.6',
+        'keyboard>=0.13.5',
+        'pyperclip>=1.8.2',
+        'scipy>=1.10.0'
+    ],
 ) 

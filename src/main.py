@@ -1,4 +1,4 @@
-from whisper_dictation import main
+from whisperdictation.app import main
 
 if __name__ == "__main__":
     main() 
