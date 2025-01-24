@@ -14,6 +14,8 @@ OPTIONS = {
         'CFBundleVersion': '1.0.0',
         'CFBundleShortVersionString': '1.0.0',
         'LSMinimumSystemVersion': '10.10',
+        'NSMicrophoneUsageDescription': 'Microphone access is required for speech recognition.',
+        'NSAppleEventsUsageDescription': 'Apple Events are used for keyboard shortcuts.',
     }
 }
 
